@@ -5,7 +5,7 @@
     <br>
     <form action='{% url '发布页面' %}' align='center' method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        APP名称:
+        标题:
         <input type="text" name="APPName">
         <br>
         <br>
@@ -14,7 +14,7 @@
         <br>
         <br>
         APP链接:
-        <input type="text" name="linkaddress">
+        <input type="text" name="linkAddress" value="https://">
         <br>
         <br>
         APP图标(缩略图):
@@ -24,7 +24,9 @@
                     大图:
         <input type="file" name="pic">
         <br>
+        {{ 错误 }}
         <br>
+
         <input class="btn btn-primary" type="submit" value="发布">
     </form>
 {% endblock content %}

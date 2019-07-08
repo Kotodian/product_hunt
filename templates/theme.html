@@ -29,6 +29,7 @@
         <div class="navbar-nav ml-auto">
 
             {% if user.is_authenticated %}
+                <a class="nav-item nav-link" href="{% url '发布页面' %}">publish</a>
                 <a class="nav-item nav-link" href="javascript:{document.getElementById('logout').submit()}">LOGOUT</a>
                 <form id='logout' action="{% url '退出页面' %}" method="post">
                     {% csrf_token %}
